@@ -11,5 +11,6 @@ public class Constants {
     public static final String API_URL = "http://api.openweathermap.org";
     public static final String API_KEY = "1ea8c345bba6427bcad27c833c8525c2";
     public static final String COORDINATES = "12,32,15,37,10";
+    public static final String METRIC_UNITS = "metric";
 
 }

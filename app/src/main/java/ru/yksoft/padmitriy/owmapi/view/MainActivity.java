@@ -39,6 +39,7 @@ import ru.yksoft.padmitriy.owmapi.model.adapter.TownAdapter;
 
 import static ru.yksoft.padmitriy.owmapi.model.Constants.API_KEY;
 import static ru.yksoft.padmitriy.owmapi.model.Constants.COORDINATES;
+import static ru.yksoft.padmitriy.owmapi.model.Constants.METRIC_UNITS;
 
 /**
  * Created by padmitriy on 08.08.17.
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     private void getAreaList() {
         if (MyApplication.townGlobalList == null) {
             swipeRefreshLayout.setRefreshing(true);
-            callTownList = api.getTownListFromArea(COORDINATES, API_KEY);
+            callTownList = api.getTownListFromArea(COORDINATES, API_KEY, METRIC_UNITS);
             callTownList.enqueue(new Callback<RectangTownListResponse>() {
                 @Override
                 public void onResponse(Call<RectangTownListResponse> call, Response<RectangTownListResponse> response) {

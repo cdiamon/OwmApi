@@ -27,7 +27,8 @@ public interface Api {
      */
     @GET("/data/2.5/box/city")
     Call<RectangTownListResponse> getTownListFromArea(@Query("bbox") String coordinates,
-                                                      @Query("appid") String API_KEY);
+                                                      @Query("appid") String API_KEY,
+                                                      @Query("units") String unitsType);
 
     /**
      * By city name
@@ -45,6 +46,7 @@ public interface Api {
      */
     @GET("/data/2.5/weather")
     Call<RectangTownListResponse.TList> getTownListFromName(@Query("q") String townName,
-                                                            @Query("appid") String API_KEY);
+                                                            @Query("appid") String API_KEY,
+                                                            @Query("units") String unitsType);
 
 }

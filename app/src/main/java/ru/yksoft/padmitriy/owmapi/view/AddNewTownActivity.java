@@ -20,6 +20,7 @@ import ru.yksoft.padmitriy.owmapi.model.RectangTownListResponse;
 import ru.yksoft.padmitriy.owmapi.model.Utils;
 
 import static ru.yksoft.padmitriy.owmapi.model.Constants.API_KEY;
+import static ru.yksoft.padmitriy.owmapi.model.Constants.METRIC_UNITS;
 
 /**
  * Created by padmitriy on 08.08.17.
@@ -57,7 +58,7 @@ public class AddNewTownActivity extends AppCompatActivity {
                     townNameInput.setError("Введите корректный город");
                 } else {
                     swipeRefreshLayout.setRefreshing(true);
-                    Call<RectangTownListResponse.TList> callTownList = api.getTownListFromName(townName, API_KEY);
+                    Call<RectangTownListResponse.TList> callTownList = api.getTownListFromName(townName, API_KEY, METRIC_UNITS);
                     callTownList.enqueue(new Callback<RectangTownListResponse.TList>() {
                         @Override
                         public void onResponse(Call<RectangTownListResponse.TList> call, Response<RectangTownListResponse.TList> response) {
