@@ -9,4 +9,7 @@
     <string name="town_wind_speed">скорость ветра</string>
     <string name="town_w_direct">направление ветра</string>
     <string name="town_remove">Удалить</string>
+    <string name="title_location_permission">Запрос разрешения</string>
+    <string name="text_location_permission">Согласны дать разрешение?</string>
+    <string name="ok">Да</string>
 </resources>

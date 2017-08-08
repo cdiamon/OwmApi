@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         } else {
             townAdapter.setTownList(Utils.retrieveListSharedpref(this));
             townAdapter.notifyDataSetChanged();
+            Snackbar.make(getWindow().getDecorView(), "list updated from SPref", Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -188,14 +189,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
                         LocationListener locationListener = this;
                         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 10, locationListener);
-
                     }
-
                 } else {
                 }
                 return;
             }
-
         }
     }
 

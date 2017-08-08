@@ -38,7 +38,6 @@ public class Utils {
         Type type = new TypeToken<List<RectangTownListResponse.TList>>() {
         }.getType();
         MyApplication.townGlobalList = gson.fromJson(jsonPreferences, type);
-        Toast.makeText(context, "list updated from SPref", Toast.LENGTH_SHORT).show();
         return MyApplication.townGlobalList;
     }
 

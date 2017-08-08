@@ -1,6 +1,7 @@
 package ru.yksoft.padmitriy.owmapi.model.adapter;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import java.util.List;
 import ru.yksoft.padmitriy.owmapi.R;
 import ru.yksoft.padmitriy.owmapi.model.RectangTownListResponse;
 import ru.yksoft.padmitriy.owmapi.model.Utils;
+import ru.yksoft.padmitriy.owmapi.view.MainActivity;
 
 /**
  * Created by padmitriy on 07.08.17.
