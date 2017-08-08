@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OwmApi</string>
+    <string name="title_activity_add_new_town">AddNewTownActivity</string>
+    <string name="input_town_name">Введите название города</string>
+    <string name="add_town_btn">Добавить город</string>
+    <string name="checking_your_city">Определяем ваш город, включите GPS</string>
+    <string name="town_name">название города</string>
+    <string name="town_temp">температура</string>
+    <string name="town_wind_speed">скорость ветра</string>
+    <string name="town_w_direct">направление ветра</string>
+    <string name="town_remove">Удалить</string>
+</resources>
