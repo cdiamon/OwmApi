@@ -169,9 +169,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     @Override
     public void onLocationChanged(Location location) {
         String longitude = "Longitude: " + location.getLongitude();
-        Log.v(TAG, longitude);
+        Log.i(TAG, longitude);
         String latitude = "Latitude: " + location.getLatitude();
-        Log.v(TAG, latitude);
+        Log.i(TAG, latitude);
 
         String cityName = null;
         Geocoder gcd = new Geocoder(getBaseContext(), Locale.getDefault());
@@ -198,11 +198,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     @Override
     public void onProviderEnabled(String s) {
-
+        textTownName.setText("Ищем координаты");
     }
 
     @Override
     public void onProviderDisabled(String s) {
-
+        textTownName.setText("Включите GPS, чтобы найти ваш город");
     }
 }

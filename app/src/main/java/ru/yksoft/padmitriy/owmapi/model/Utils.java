@@ -42,34 +42,12 @@ public class Utils {
         return MyApplication.townGlobalList;
     }
 
-    public static String degreesToDirections(Float heading)
-    {
-        String strHeading = "?";
-        Hashtable<String, Float> cardinal = new Hashtable<String, Float>();
-        cardinal.put("Север_1", new Float(0));
-        cardinal.put("Северо-восточный", new Float(45));
-        cardinal.put("Восточный", new Float(90));
-        cardinal.put("Юго-восточный", new Float(135));
-        cardinal.put("Южный", new Float(180));
-        cardinal.put("Юго-западный", new Float(225));
-        cardinal.put("Западный", new Float(270));
-        cardinal.put("Северо-западный", new Float(315));
-        cardinal.put("Север_2", new Float(360));
-
-        for (String key: cardinal.keySet())
-        {
-            Float value = cardinal.get(key);
-            if (Math.abs(heading - value) < 30)
-            {
-                strHeading = key;
-                if (key.contains("Север_"))
-                {
-                    strHeading = "Северный";
-                }
-                break;
-            }
+    public static String degreesToDirections(Double x) {
+        String directions[] = {"Северный", "Северо-восточный", "Восточный", "Юго-восточный",
+                "Южный", "Юго-западный", "Западный", "Северо-западный", "Северный"};
+        if (x == null) {
+            return "нет данных";
         }
-        return strHeading;
+        return directions[(int) Math.round((((double) x % 360) / 45))];
     }
-
 }

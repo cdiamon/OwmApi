@@ -70,12 +70,16 @@ public class AddNewTownActivity extends AppCompatActivity {
                                     swipeRefreshLayout.setRefreshing(false);
                                     finish();
                                 }
+                            } else {
+                                townNameInput.setError("ошибка, попробуйте другое название");
+                                swipeRefreshLayout.setRefreshing(false);
+
                             }
                         }
 
                         @Override
                         public void onFailure(Call<RectangTownListResponse.TList> call, Throwable t) {
-                            townNameInput.setError("ошибка, попробуйте другое название");
+                            townNameInput.setError("неизвестная ошибка");
                             swipeRefreshLayout.setRefreshing(false);
                         }
                     });

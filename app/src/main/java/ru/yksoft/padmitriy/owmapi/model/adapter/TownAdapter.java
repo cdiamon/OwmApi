@@ -81,7 +81,7 @@ public class TownAdapter extends RecyclerView.Adapter<TownAdapter.ViewHolder> {
         holder.textTownName.setText(townList.get(position).getName() + " City");
         holder.textTownTemperature.setText("Средняя температура " + (((townList.get(position).getMain().getTempMax().longValue() + townList.get(position).getMain().getTempMin().longValue()) / 2)) + "\u2103");
         holder.textTownWindspeed.setText("Скорость ветра " + (townList.get(position).getWind().getSpeed()).longValue() + " м/с");
-        holder.textTownWinddirection.setText("Направление ветра " + (Utils.degreesToDirections(townList.get(position).getWind().getDeg().floatValue())));
+        holder.textTownWinddirection.setText("Направление ветра " + (Utils.degreesToDirections(townList.get(position).getWind().getDeg())));
 
         holder.textTownRemove.setOnClickListener(new View.OnClickListener() {
             @Override
